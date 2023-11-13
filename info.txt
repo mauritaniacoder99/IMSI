@@ -1,0 +1,25 @@
+This Ruby script demonstrates the process of making an HTTP GET request to a specified URL, where the target is identified by an IMSI (International Mobile Subscriber Identity) as a path parameter. The key steps of the script are:
+
+1. **Gem Setup:**
+   - Ensures the necessary RubyGems are loaded and sets up the Bundler environment.
+   - Includes libraries for handling HTTP requests (`net/http`) and working with URIs (`uri`).
+
+2. **Target IMSI Setting:**
+   - Defines the IMSI of the target device, a unique identifier in mobile networks.
+
+3. **HTTP Request Creation:**
+   - Creates a URI object with the target URL and IMSI as a path parameter.
+   - Initializes an HTTP GET request object using the specified URI.
+
+4. **Header Configuration:**
+   - Sets the headers for the HTTP request, specifying that the content type is JSON and expects JSON in the response.
+
+5. **HTTP Request Execution:**
+   - Opens an HTTP connection to the specified host and port using `Net::HTTP.start`.
+   - Sends the HTTP GET request using the created `Net::HTTP::Get` object.
+   - Captures and stores the response.
+
+6. **Response Display:**
+   - Prints the body of the HTTP response to the console.
+
+this script serves as a straightforward example of using Ruby to interact with an HTTP server, specifically targeting a resource identified by an IMSI. It assumes the presence of a local server at `http://localhost:8080` capable of handling the request and providing an appropriate response.
